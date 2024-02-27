@@ -50,50 +50,98 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex flex-wrap items-center justify-between p-4 text-slate-800">
-      <div className="flex items-center font-bold text-slate-800">
-          <img src="/images/logo-2.png" alt="Logo" />
-         <Link to="/">Pizato</Link>
-      </div>
+    // <nav className="flex flex-wrap items-center justify-between p-4 text-slate-800">
+    //   <div className="flex items-center font-bold text-slate-800">
+    //       <img src="/images/logo-2.png" alt="Logo" />
+    //      <Link to="/">Pizza</Link>
+    //   </div>
 
-      <div className="lg:hidden">
-        <button onClick={toggleMenu} className="text-black focus:outline-none">
-          {isMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
+    //   <div className="lg:hidden">
+    //     <button onClick={toggleMenu} className="text-black focus:outline-none">
+    //       {isMenuOpen ? <FaTimes /> : <FaBars />}
+    //     </button>
+    //   </div>
 
-      <div
-        className={`lg:flex lg:items-center lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}
-      >
-        <div className="flex items-center gap-5 mt-4 lg:mt-0">
+    //   <div
+    //     className={`lg:flex lg:items-center lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}
+    //   >
+    //     <div className="flex items-center gap-5 mt-4 lg:mt-0">
         
-          {isAuth && (
-            <>
-              <Link to="/orders" className="hover:text-black font-bold">
-                My Orders
-              </Link>
-              <span
-                className="hover:text-black font-bold cursor-pointer"
-                onClick={handleLogout}
-              >
-                Logout
-              </span>
-            </>
-          )}
-          {!isAuth && (
-            <Link to="/login" className="hover:text-black font-bold">
-              Login
+    //       {isAuth && (
+    //         <>
+    //           <Link to="/orders" className="hover:text-black font-bold">
+    //             My Orders
+    //           </Link>
+    //           <span
+    //             className="hover:text-black font-bold cursor-pointer"
+    //             onClick={handleLogout}
+    //           >
+    //             Logout
+    //           </span>
+    //         </>
+    //       )}
+    //       {!isAuth && (
+    //         <Link to="/login" className="hover:text-black font-bold">
+    //           Login
+    //         </Link>
+    //       )}
+    //       <Link
+    //         to="/cart"
+    //         className="bg-orange-600 rounded-sm p-2 px-4 cursor-pointer hover:rounded transition duration-300 ease-in-out transform hover:translate-x-1"
+    //       >
+    //         <FaShoppingCart />
+    //       </Link>
+    //     </div>
+    //   </div>
+    // </nav>
+    <nav className="flex flex-wrap items-center justify-between p-4 text-slate-800">
+    <div className="flex items-center font-bold text-slate-800">
+      <img src="/images/logo-2.png" alt="Logo" />
+      <Link to="/">Pizza</Link>
+    </div>
+
+    <div className="lg:hidden">
+      <button onClick={toggleMenu} className="text-black focus:outline-none">
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+    </div>
+
+    <div className={`lg:flex lg:items-center lg:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}>
+      <div className="flex items-center gap-5 mt-4 lg:mt-0">
+        <Link to="/about" className="hover:text-black font-bold">
+          About
+        </Link>
+        <Link to="/contact" className="hover:text-black font-bold">
+          Contact Us
+        </Link>
+
+        {/* {isAuth && (
+          <>
+            <Link to="/orders" className="hover:text-black font-bold">
+              My Orders
             </Link>
-          )}
-          <Link
-            to="/cart"
-            className="bg-orange-600 rounded-sm p-2 px-4 cursor-pointer hover:rounded transition duration-300 ease-in-out transform hover:translate-x-1"
-          >
-            <FaShoppingCart />
+            <span
+              className="hover:text-black font-bold cursor-pointer"
+              onClick={handleLogout}
+            >
+              Logout
+            </span>
+          </>
+        )} */}
+        {/* {!isAuth && (
+          <Link to="/login" className="hover:text-black font-bold">
+            Login
           </Link>
-        </div>
+        )}
+        <Link
+          to="/cart"
+          className="bg-orange-600 rounded-sm p-2 px-4 cursor-pointer hover:rounded transition duration-300 ease-in-out transform hover:translate-x-1"
+        >
+          <FaShoppingCart />
+        </Link> */}
       </div>
-    </nav>
+    </div>
+  </nav>
   );
 };
 
